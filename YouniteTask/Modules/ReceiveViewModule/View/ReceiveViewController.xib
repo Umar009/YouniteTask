@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReceiveViewController" customModule="YouniteTask" customModuleProvider="target">
+            <connections>
+                <outlet property="btnRestart" destination="Dbh-dL-QOD" id="Avx-Yz-lBJ"/>
+                <outlet property="cvCollectionView" destination="jyz-bW-7dh" id="VAL-O5-kj5"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="jyz-bW-7dh">
+                    <rect key="frame" x="0.0" y="114" width="414" height="697"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Qo6-Fj-00a">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbh-dL-QOD">
+                    <rect key="frame" x="20" y="831" width="374" height="45"/>
+                    <color key="backgroundColor" red="0.96470588239999999" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="OP5-XU-9Z2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Restart Server">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="actionBtnReceivePhotos:" destination="-1" eventType="touchUpInside" id="kKa-Gi-5sg"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mNA-9c-98C">
+                    <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receive Photo's" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OTb-yJ-2K2">
+                            <rect key="frame" x="125.5" y="19.5" width="163" height="21"/>
+                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5u-4U-wBA">
+                            <rect key="frame" x="20" y="0.0" width="39" height="60"/>
+                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Back"/>
+                            <connections>
+                                <action selector="actionBackPressed:" destination="-1" eventType="touchUpInside" id="t3e-g5-lUp"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="m5u-4U-wBA" firstAttribute="top" secondItem="mNA-9c-98C" secondAttribute="top" id="0uo-TR-WCz"/>
+                        <constraint firstItem="m5u-4U-wBA" firstAttribute="leading" secondItem="mNA-9c-98C" secondAttribute="leading" constant="20" id="9qn-nf-1tA"/>
+                        <constraint firstItem="OTb-yJ-2K2" firstAttribute="centerX" secondItem="mNA-9c-98C" secondAttribute="centerX" id="LJz-e0-OhV"/>
+                        <constraint firstItem="m5u-4U-wBA" firstAttribute="centerY" secondItem="mNA-9c-98C" secondAttribute="centerY" id="azG-4d-vJm"/>
+                        <constraint firstAttribute="height" constant="60" id="gxZ-PS-9GM"/>
+                        <constraint firstItem="OTb-yJ-2K2" firstAttribute="centerY" secondItem="mNA-9c-98C" secondAttribute="centerY" id="hnN-Fw-9Mh"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="mNA-9c-98C" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="B5s-Tf-oWL"/>
+                <constraint firstItem="jyz-bW-7dh" firstAttribute="top" secondItem="mNA-9c-98C" secondAttribute="bottom" constant="10" id="BJj-ED-gqc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Dbh-dL-QOD" secondAttribute="trailing" constant="20" id="FZc-CE-6n2"/>
+                <constraint firstItem="jyz-bW-7dh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NzE-Xi-Kkg"/>
+                <constraint firstItem="Dbh-dL-QOD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="af1-90-64I"/>
+                <constraint firstItem="Dbh-dL-QOD" firstAttribute="top" secondItem="jyz-bW-7dh" secondAttribute="bottom" constant="20" id="d84-iq-IPW"/>
+                <constraint firstItem="mNA-9c-98C" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="eXh-Vb-31J"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mNA-9c-98C" secondAttribute="trailing" id="jH1-Sz-bGS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jyz-bW-7dh" secondAttribute="trailing" id="mjm-4f-ZdW"/>
+                <constraint firstAttribute="bottom" secondItem="Dbh-dL-QOD" secondAttribute="bottom" constant="20" id="whs-yX-hkN"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </view>
+    </objects>
+</document>

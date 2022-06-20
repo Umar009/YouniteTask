@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="YouniteTask" customModuleProvider="target">
+            <connections>
+                <outlet property="btnReceive" destination="Dbh-dL-QOD" id="Avx-Yz-lBJ"/>
+                <outlet property="btnStartDownload" destination="S1e-bH-9fp" id="ie4-Df-BWn"/>
+                <outlet property="cvCollectionView" destination="jyz-bW-7dh" id="VAL-O5-kj5"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="jyz-bW-7dh">
+                    <rect key="frame" x="0.0" y="114" width="414" height="663"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Qo6-Fj-00a">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QxB-R4-aXK">
+                    <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAH-gL-5Cj">
+                            <rect key="frame" x="185.5" y="19.5" width="43.5" height="21"/>
+                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="6Q9-Uo-sxK"/>
+                        <constraint firstItem="lAH-gL-5Cj" firstAttribute="centerX" secondItem="QxB-R4-aXK" secondAttribute="centerX" id="caJ-5E-WbC"/>
+                        <constraint firstItem="lAH-gL-5Cj" firstAttribute="centerY" secondItem="QxB-R4-aXK" secondAttribute="centerY" id="rc9-o0-4cc"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1e-bH-9fp">
+                    <rect key="frame" x="20" y="797" width="177" height="45"/>
+                    <color key="backgroundColor" red="0.96470588239999999" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="1PQ-ir-800"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="DownLoad Photos">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="actionBtnStartDownload:" destination="-1" eventType="touchUpInside" id="eZS-Ss-ACe"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbh-dL-QOD">
+                    <rect key="frame" x="217" y="797" width="177" height="45"/>
+                    <color key="backgroundColor" red="0.96470588239999999" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="OP5-XU-9Z2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Receive Photos">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="actionBtnReceivePhotos:" destination="-1" eventType="touchUpInside" id="kKa-Gi-5sg"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Dbh-dL-QOD" firstAttribute="top" secondItem="S1e-bH-9fp" secondAttribute="top" id="4d2-T5-dcH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Dbh-dL-QOD" secondAttribute="trailing" constant="20" id="FZc-CE-6n2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="S1e-bH-9fp" secondAttribute="bottom" constant="20" id="HK7-xa-CqT"/>
+                <constraint firstItem="jyz-bW-7dh" firstAttribute="top" secondItem="QxB-R4-aXK" secondAttribute="bottom" constant="10" id="Hc5-Vw-QLg"/>
+                <constraint firstItem="S1e-bH-9fp" firstAttribute="width" secondItem="Dbh-dL-QOD" secondAttribute="width" id="K7X-g5-Fco"/>
+                <constraint firstItem="jyz-bW-7dh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NzE-Xi-Kkg"/>
+                <constraint firstItem="QxB-R4-aXK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="W5M-k7-Ghr"/>
+                <constraint firstItem="Dbh-dL-QOD" firstAttribute="leading" secondItem="S1e-bH-9fp" secondAttribute="trailing" constant="20" id="YPQ-7Q-JfB"/>
+                <constraint firstItem="S1e-bH-9fp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="cSD-JZ-lhV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jyz-bW-7dh" secondAttribute="trailing" id="mjm-4f-ZdW"/>
+                <constraint firstItem="QxB-R4-aXK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qvd-hE-uff"/>
+                <constraint firstItem="QxB-R4-aXK" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="qzC-Yh-lNd"/>
+                <constraint firstItem="S1e-bH-9fp" firstAttribute="top" secondItem="jyz-bW-7dh" secondAttribute="bottom" constant="20" id="xPw-hA-NMz"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </view>
+    </objects>
+</document>
